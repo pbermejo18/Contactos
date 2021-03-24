@@ -1,6 +1,6 @@
 package com.company;
 
 public class Nota {
-    String titulo;
-    String contenido;
+    String nombre;
+    String numero;
 }

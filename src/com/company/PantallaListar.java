@@ -8,7 +8,7 @@ public class PantallaListar {
         System.out.println("******************");
 
         for(Nota nota: Main.blocDeNotas.notas){
-            System.out.println(nota.titulo + " " + nota.contenido);
+            System.out.println(nota.nombre + " " + nota.numero);
         }
 
     }

@@ -11,10 +11,10 @@ public class PantallaCrear {
         Nota nota = new Nota();
 
         System.out.println("Nombre: ");
-        nota.titulo = Main.scanner.nextLine();
+        nota.nombre = Main.scanner.nextLine();
 
         System.out.println("Número: ");
-        nota.contenido = Main.scanner.nextLine();
+        nota.numero = Main.scanner.nextLine();
 
         Main.blocDeNotas.notas.add(nota);
     }
