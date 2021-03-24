@@ -1,6 +1,6 @@
 package com.company;
 
-public class Nota {
+public class Contacto {
     String nombre;
     String numero;
 }

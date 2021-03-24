@@ -8,14 +8,14 @@ public class PantallaCrear {
         System.out.println("*    Nuevo contacto   *");
         System.out.println("***********************");
 
-        Nota nota = new Nota();
+        Contacto contacto = new Contacto();
 
         System.out.println("Nombre: ");
-        nota.nombre = Main.scanner.nextLine();
+        contacto.nombre = Main.scanner.nextLine();
 
         System.out.println("Número: ");
-        nota.numero = Main.scanner.nextLine();
+        contacto.numero = Main.scanner.nextLine();
 
-        Main.blocDeNotas.notas.add(nota);
+        Main.blocDeNotas.contactos.add(contacto);
     }
 }
