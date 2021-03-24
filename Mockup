@@ -1,56 +1,55 @@
-********************
-*   BLOC DE NOTAS  *
-********************
+******************
+*     Agenda     *
+******************
 
-1. Crear Nota
-2. Buscar nota
-3. Listar nota
-4. Eliminar nota
+1. Nuevo contacto
+2. Listar contactos
+3. Eliminar contacto
+4. Salir
 
 Opcion:
 1
 
-
----------------------------------------------- 1
+-----------------------------------------------
 ********************
-*  CREAR NOTA      *
+*  CREAR Contacto  *
 ********************
 
-Titulo:
+Nombre:
+Apellidos:
+Correo:
+Numero:
 
 
------------------------------------------------ 1
+-----------------------------------------------
 
-Titulo:
-Recuperaciones
-Contenido:
-1/20/2021 Examen recuperacion de programacion
-2/20/2022 Examen recuperacion BD
-.
+*********************
+*     Contactos     *
+*********************
 
-Nota guardada!
-(sleep 1)
------------------------------------------------ MENU / 2
+1. Nuevo contacto
+2. Listar contactos
+3. Eliminar contacto
+4. Salir
 
-Texto a buscar:
-Examen
+Opcion:
+2
 
-Notas
+-----------------------------------------------
 
-1. Examenes
-2. Recuperaciones
+*********************
+*     Contactos     *
+*********************
+Pol Bermejo Guzman -- pbermejo@elpuig.xeill.net -- 617577035
 
-Seleccion:
-1
 
---------------------------------------------- VER LA NOTA
+-----------------------------------------------
 
-Titulo:
-Examenes
-Contenido:
-1/20/2021 Examen de programacion
-2/20/2022 Examen BD
+*********************
+*     Contactos     *
+*********************
 
-Pulse una tecla para volver al menu...
-
----------------------------------------------
+1. Nuevo contacto
+2. Listar contactos
+3. Eliminar contacto
+4. Salir
