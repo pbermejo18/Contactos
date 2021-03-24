@@ -10,11 +10,17 @@ public class PantallaCrear {
 
         Contacto contacto = new Contacto();
 
-        System.out.println("Nombre: ");
-        contacto.nombre = Main.scanner.nextLine();
+        System.out.print("Nombre: ");
+        contacto.Nombre = Main.scanner.nextLine();
 
-        System.out.println("Número: ");
-        contacto.numero = Main.scanner.nextLine();
+        System.out.print("Apellidos: ");
+        contacto.Apellidos = Main.scanner.nextLine();
+
+        System.out.print("Correo: ");
+        contacto.Correo = Main.scanner.nextLine();
+
+        System.out.print("Número: ");
+        contacto.Numero = Main.scanner.nextLine();
 
         Main.blocDeNotas.contactos.add(contacto);
     }

@@ -8,7 +8,7 @@ public class PantallaListar {
         System.out.println("******************");
 
         for(Contacto contacto: Main.blocDeNotas.contactos){
-            System.out.println(contacto.nombre + " " + contacto.numero);
+            System.out.println(contacto.Nombre + " -- " + contacto.Apellidos + " -- " + contacto.Correo + " -- " + contacto.Numero);
         }
 
     }
