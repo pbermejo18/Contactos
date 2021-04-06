@@ -22,6 +22,6 @@ public class PantallaCrear {
         System.out.print("Número: ");
         contacto.Numero = Main.scanner.nextLine();
 
-        Main.blocDeNotas.contactos.add(contacto);
+        Main.listContactos.contactos.add(contacto);
     }
 }

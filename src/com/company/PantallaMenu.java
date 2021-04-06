@@ -21,7 +21,8 @@ public class PantallaMenu {
             PantallaListar pantallaListar = new PantallaListar();
             pantallaListar.mostrar();
         } else if("3".equals(opcion)){
-            return false;
+            PantallaEliminar pantallaEliminar = new PantallaEliminar();
+            pantallaEliminar.mostrar();
         } else if ("4".equals(opcion)){
             return false;
         }

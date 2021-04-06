@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static BlocDeNotas blocDeNotas = new BlocDeNotas();
+    static ListContactos listContactos = new ListContactos();
 
     public static void main(String[] args) {
 
