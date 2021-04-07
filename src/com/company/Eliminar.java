@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Eliminar {
-    void mostrar(Contacto contacto) {
+    boolean mostrar(Contacto contacto) {
         System.out.println();
 
         Scanner VerifyEliminar = new Scanner(System.in);
@@ -29,15 +29,20 @@ public class Eliminar {
         mensaje.mostrarOpcion("¿Que desea hacer a continuacion?");
 
         Menu menu = new Menu();
-        String[] opciones = {"Listar Contactos", "Volver al menu principal"};
+        String[] opciones = {"Listar contactos", "Eliminar otro contacto", "Volver al menu principal", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
             PantallaListar pantallaListar = new PantallaListar();
             pantallaListar.mostrar();
-        } else if("2".equals(opcion)){
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
+        } else if ("2".equals(opcion)) {
+            PantallaEliminar pantallaEliminar = new PantallaEliminar();
+            pantallaEliminar.mostrar();
+        } else if("3".equals(opcion)){
+            return false;
+        } else if ("4".equals(opcion)){
+            System.exit(0);
         }
+        return true;
     }
 }

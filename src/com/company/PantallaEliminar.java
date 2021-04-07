@@ -1,7 +1,7 @@
 package com.company;
 
 public class PantallaEliminar {
-    void mostrar() {
+    boolean mostrar() {
         System.out.println();
         System.out.println("······························");
         System.out.println("|     Eliminar contactos     |");
@@ -20,12 +20,12 @@ public class PantallaEliminar {
         }
         if (!found){
             Mensaje mensaje = new Mensaje();
-            mensaje.mostrarError("Contacto no existente");
+            mensaje.mostrarError("El contacto no existe");
 
-            mensaje.mostrarOpcion("Que desea hacer a continuacion");
+            mensaje.mostrarOpcion("¿Que quieres hacer ahora?");
 
             Menu menu = new Menu();
-            String[] opciones = {"Lista de contactos", "Eliminar otro contacto", "Volver al menu principal"};
+            String[] opciones = {"Listar contactos", "Eliminar otro contacto", "Volver al menu principal", "Salir"};
             String opcion = menu.elegirOpcion(opciones);
 
             if ("1".equals(opcion)) {
@@ -35,13 +35,15 @@ public class PantallaEliminar {
                 PantallaEliminar pantallaEliminar = new PantallaEliminar();
                 pantallaEliminar.mostrar();
             } else if("3".equals(opcion)){
-                PantallaMenu pantallaMenu = new PantallaMenu();
-                pantallaMenu.mostrar();
+                return false;
+            } else if ("4".equals(opcion)){
+                System.exit(0);
             }
         }
         else {
             Eliminar eliminar = new Eliminar();
             eliminar.mostrar(foundcontacto);
         }
+        return true;
     }
 }
