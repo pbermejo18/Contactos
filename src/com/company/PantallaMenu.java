@@ -6,12 +6,11 @@ import java.util.Scanner;
 public class PantallaMenu {
 
     boolean mostrar(){
-        System.out.println("***************");
-        System.out.println("*    Agenda   *");
-        System.out.println("***************");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("Agenda");
 
         Menu menu = new Menu();
-        String[] opciones = {"Nuevo contacto", "Listar contactos", "Eliminar contacto", "Salir"};
+        String[] opciones = {"Nuevo contacto", "Listar contactos", "Eliminar contacto", "Editar contacto", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
@@ -24,6 +23,9 @@ public class PantallaMenu {
             PantallaEliminar pantallaEliminar = new PantallaEliminar();
             pantallaEliminar.mostrar();
         } else if ("4".equals(opcion)){
+            PantallaEditar pantallaEditar = new PantallaEditar();
+            pantallaEditar.mostrar();
+        } else if ("5".equals(opcion)){
             return false;
         }
 

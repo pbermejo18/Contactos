@@ -4,9 +4,8 @@ package com.company;
 public class PantallaCrear {
 
     boolean mostrar() {
-        System.out.println("***********************");
-        System.out.println("*    Nuevo contacto   *");
-        System.out.println("***********************");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("Nuevo contacto");
 
         Contacto contacto = new Contacto();
 
@@ -28,7 +27,7 @@ public class PantallaCrear {
         mensaje.mostrarOpcion("¿Que quieres hacer ahora?");
 
         Menu menu = new Menu();
-        String[] opciones = {"Crear otro contacto", "Eliminar contacto", "Listar contactos", "Volver al menu principal", "Salir"};
+        String[] opciones = {"Crear otro contacto", "Eliminar contacto", "Listar contactos", "Editar contacto", "Volver al menu principal", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
@@ -41,8 +40,11 @@ public class PantallaCrear {
             PantallaListar pantallaListar = new PantallaListar();
             pantallaListar.mostrar();
         } else if("4".equals(opcion)){
-            return false;
+            PantallaEditar pantallaEditar = new PantallaEditar();
+            pantallaEditar.mostrar();
         } else if("5".equals(opcion)){
+            return false;
+        } else if("6".equals(opcion)){
             System.exit(0);
         }
         return true;

@@ -3,12 +3,22 @@ package com.company;
 public class PantallaListar {
 
     boolean mostrar(){
-        System.out.println("******************");
-        System.out.println("*    Contactos   *");
-        System.out.println("******************");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("Contactos");
 
         for(Contacto contacto: Main.listContactos.contactos){
-            System.out.println(contacto.Nombre + " -- " + contacto.Apellidos + " -- " + contacto.Correo + " -- " + contacto.Numero);
+            if (contacto.Nombre != null){
+                System.out.print(contacto.Nombre + " -- ");
+            }
+            if (contacto.Apellidos != null){
+                System.out.print(contacto.Apellidos + " -- ");
+            }
+            if (contacto.Correo != null){
+                System.out.println(contacto.Correo + " -- ");
+            }
+            if (contacto.Numero != null){
+                System.out.println(contacto.Numero);
+            }
             System.out.println();
             System.out.println();
         }
@@ -16,7 +26,7 @@ public class PantallaListar {
         mensaje.mostrarOpcion("¿Que quieres hacer ahora?");
 
         Menu menu = new Menu();
-        String[] opciones = {"Crear contacto", "Eliminar contacto", "Volver al menu principal", "Salir"};
+        String[] opciones = {"Crear contacto", "Eliminar contacto", "Editar contacto", "Volver al menu principal", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
@@ -26,8 +36,11 @@ public class PantallaListar {
             PantallaEliminar pantallaEliminar = new PantallaEliminar();
             pantallaEliminar.mostrar();
         } else if("3".equals(opcion)){
-            return false;
+            PantallaEditar pantallaEditar = new PantallaEditar();
+            pantallaEditar.mostrar();
         } else if("4".equals(opcion)){
+            return false;
+        } else if("5".equals(opcion)){
             System.exit(0);
         }
         return true;

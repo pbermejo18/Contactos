@@ -7,8 +7,7 @@ public class Eliminar {
         System.out.println();
 
         Scanner VerifyEliminar = new Scanner(System.in);
-        System.out.print("\033[31m" + "Una vez eliminado el contacto no habra manera de " +
-                "recuperarlo, esta seguro de eliminar el contacto?(S/N): " + "\033[0m");
+        System.out.print("\033[31m" + "Cuando elimines el contacto no podras recuperarlo, estas seguro?(S/N): " + "\033[0m");
         String next = VerifyEliminar.next();
 
         if (next.equals("S") || next.equals("s")){
