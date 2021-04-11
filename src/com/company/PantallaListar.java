@@ -14,13 +14,11 @@ public class PantallaListar {
                 System.out.print(contacto.Apellidos + " -- ");
             }
             if (contacto.Correo != null){
-                System.out.println(contacto.Correo + " -- ");
+                System.out.print(contacto.Correo + " -- ");
             }
             if (contacto.Numero != null){
                 System.out.println(contacto.Numero);
             }
-            System.out.println();
-            System.out.println();
         }
         Mensaje mensaje = new Mensaje();
         mensaje.mostrarOpcion("¿Que quieres hacer ahora?");

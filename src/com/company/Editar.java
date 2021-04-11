@@ -4,7 +4,7 @@ public class Editar {
     boolean mostrar(Contacto contacto) {
         System.out.println();
         Mensaje mensaje = new Mensaje();
-        mensaje.mostrarOpcion("Que deseas cambiar? ");
+        mensaje.mostrarOpcion("Que deseas cambiar? (Nombre/Apellidos/Correo/Numero)");
         String cambio = Main.scanner.nextLine();
 
         if (cambio.equals("Nombre") | cambio.equals("nombre")){
@@ -26,21 +26,27 @@ public class Editar {
 
         mensaje.mostrarInfo("Contacto actualizado!");
 
-        mensaje.mostrarOpcion("¿Que desea hacer a continuacion?");
+        mensaje.mostrarOpcion("¿Que quieres hacer ahora?");
 
         Menu menu = new Menu();
-        String[] opciones = {"Lista de contactos", "Editar otro contacto", "Volver al menu principal", "Salir"};
+        String[] opciones = {"Crear contacto", "Lista de contactos", "Editar otro contacto", "Eliminar contacto", "Volver al menu principal", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
+            PantallaCrear pantallaCrear = new PantallaCrear();
+            pantallaCrear.mostrar();
+        } else if ("2".equals(opcion)) {
             PantallaListar pantallaListar = new PantallaListar();
             pantallaListar.mostrar();
-        } else if ("2".equals(opcion)) {
+        } else if ("3".equals(opcion)) {
             PantallaEditar pantallaEditar = new PantallaEditar();
             pantallaEditar.mostrar();
-        } else if("3".equals(opcion)){
+        } else if ("4".equals(opcion)) {
+            PantallaEliminar pantallaEliminar = new PantallaEliminar();
+            pantallaEliminar.mostrar();
+        } else if("5".equals(opcion)){
             return false;
-        } else if("4".equals(opcion)){
+        } else if ("6".equals(opcion)){
             System.exit(0);
         }
         return true;

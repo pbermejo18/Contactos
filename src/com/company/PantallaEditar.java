@@ -16,25 +16,31 @@ public class PantallaEditar {
                 foundcontacto = contacto;
             }
         }
-        if (!found){
+        if (found==false){
             Mensaje mensaje = new Mensaje();
             mensaje.mostrarError("El contacto no existe");
 
-            mensaje.mostrarOpcion("Que desea hacer a continuacion");
+            mensaje.mostrarOpcion("Que quieres hacer ahora?");
 
             Menu menu = new Menu();
-            String[] opciones = {"Lista de contactos", "Editar otro contacto", "Volver al menu principal", "Salir"};
+            String[] opciones = {"Crear contacto", "Lista de contactos", "Editar otro contacto", "Eliminar contacto", "Volver al menu principal", "Salir"};
             String opcion = menu.elegirOpcion(opciones);
 
             if ("1".equals(opcion)) {
+                PantallaCrear pantallaCrear = new PantallaCrear();
+                pantallaCrear.mostrar();
+            } else if ("2".equals(opcion)) {
                 PantallaListar pantallaListar = new PantallaListar();
                 pantallaListar.mostrar();
-            } else if ("2".equals(opcion)) {
+            } else if ("3".equals(opcion)) {
                 PantallaEditar pantallaEditar = new PantallaEditar();
                 pantallaEditar.mostrar();
-            } else if("3".equals(opcion)){
+            } else if ("4".equals(opcion)) {
+                PantallaEliminar pantallaEliminar = new PantallaEliminar();
+                pantallaEliminar.mostrar();
+            } else if("5".equals(opcion)){
                 return false;
-            } else if("4".equals(opcion)){
+            } else if ("6".equals(opcion)){
                 System.exit(0);
             }
         }

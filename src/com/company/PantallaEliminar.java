@@ -23,21 +23,24 @@ public class PantallaEliminar {
             mensaje.mostrarOpcion("¿Que quieres hacer ahora?");
 
             Menu menu = new Menu();
-            String[] opciones = {"Listar contactos", "Eliminar otro contacto", "Editar contacto", "Volver al menu principal", "Salir"};
+            String[] opciones = {"Crear contacto", "Listar contactos", "Editar contacto", "Eliminar otro contacto", "Volver al menu principal", "Salir"};
             String opcion = menu.elegirOpcion(opciones);
 
             if ("1".equals(opcion)) {
+                PantallaCrear pantallaCrear = new PantallaCrear();
+                pantallaCrear.mostrar();
+            } else if ("2".equals(opcion)) {
                 PantallaListar pantallaListar = new PantallaListar();
                 pantallaListar.mostrar();
-            } else if ("2".equals(opcion)) {
-                PantallaEliminar pantallaEliminar = new PantallaEliminar();
-                pantallaEliminar.mostrar();
-            } else if("3".equals(opcion)){
+            } else if ("3".equals(opcion)) {
                 PantallaEditar pantallaEditar = new PantallaEditar();
                 pantallaEditar.mostrar();
-            } else if("4".equals(opcion)){
+            } else if ("4".equals(opcion)) {
+                PantallaEliminar pantallaEliminar = new PantallaEliminar();
+                pantallaEliminar.mostrar();
+            } else if("5".equals(opcion)){
                 return false;
-            } else if ("5".equals(opcion)){
+            } else if ("6".equals(opcion)){
                 System.exit(0);
             }
         }
